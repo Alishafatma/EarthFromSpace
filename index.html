@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earth From Space</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* RESET */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: radial-gradient(circle at top, #020024, #000000);
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        /* NAVBAR */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 60px;
+            position: fixed;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(6px);
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 600;
+            color: #00cfff;
+            letter-spacing: 1px;
+        }
+
+        nav a {
+            margin-left: 30px;
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 15px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #00cfff;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 60px;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 600px;
+            z-index: 2;
+        }
+
+        .hero-content h1 {
+            font-size: 52px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .hero-content h1 span {
+            color: #00cfff;
+        }
+
+        .hero-content p {
+            font-size: 16px;
+            opacity: 0.85;
+            margin-bottom: 30px;
+        }
+
+        .buttons a {
+            display: inline-block;
+            padding: 12px 28px;
+            margin-right: 15px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: #00cfff;
+            color: #000;
+        }
+
+        .btn-primary:hover {
+            background: #00a6cc;
+        }
+
+        .btn-secondary {
+            border: 1px solid #00cfff;
+            color: #00cfff;
+        }
+
+        .btn-secondary:hover {
+            background: #00cfff;
+            color: #000;
+        }
+
+        /* EARTH IMAGE */
+        .earth {
+            position: absolute;
+            right: -150px;
+            width: 600px;
+            opacity: 0.9;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 13px;
+            opacity: 0.6;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 900px) {
+            .earth {
+                width: 400px;
+                right: -200px;
+            }
+
+            .hero-content h1 {
+                font-size: 38px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            header {
+                padding: 20px;
+            }
+
+            nav {
+                display: none;
+            }
+
+            .earth {
+                display: none;
+            }
+
+            .hero {
+                padding: 0 20px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <div class="logo">EarthFromSpace</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Earth</a>
+            <a href="explore.html">Explore</a> 
+            <a href="gallery.html">Gallery</a>
+            <a href="climate.html" class="active">Climate</a>
+            <a href="satellite.html">Satellites</a>
+            <a href="atmosphere.html" >Atmosphere</a>
+           
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Our Home <br><span>Seen From Space</span></h1>
+            <p>
+                Experience the beauty of Earth as seen from space — a fragile blue planet,
+                protected by atmosphere and shaped by nature.
+            </p>
+
+            <div class="buttons">
+                <a href="#" class="btn-primary">Explore Earth</a>
+                <a href="#" class="btn-secondary">View Gallery</a>
+            </div>
+        </div>
+
+        <section class="ai-preview">
+    <h2>Ask Earth AI 🌍</h2>
+    <p>
+        Ask questions about climate change, satellites, atmosphere layers,
+        and Earth facts using AI powered by Gemini.
+    </p>
+    <a href="ai.html" class="ai-button">Ask Earth AI</a>
+</section>
+
+        <!-- EARTH IMAGE -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/97/The_Earth_seen_from_Apollo_17.jpg"
+             alt="Earth from Space" class="earth">
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        © 2026 Earth From Space | Designed by You
+    </footer>
+
+</body>
+</html>
