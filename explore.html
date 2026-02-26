@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Explore Earth</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: radial-gradient(circle at top, #020024, #000);
+            color: white;
+            overflow-x: hidden;
+        }
+
+        /* HEADER */
+        header {
+            padding: 20px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(0,0,0,0.6);
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: 600;
+            color: #00cfff;
+        }
+
+        nav a {
+            margin-left: 25px;
+            text-decoration: none;
+            color: white;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #00cfff;
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 60px;
+        }
+
+        .hero-text {
+            max-width: 520px;
+            animation: fadeSlide 1.2s ease forwards;
+        }
+
+        .hero-text h1 {
+            font-size: 46px;
+            color: #00cfff;
+        }
+
+        .hero-text p {
+            margin: 20px 0 30px;
+            opacity: 0.85;
+        }
+
+        .hero-text a {
+            display: inline-block;
+            padding: 14px 30px;
+            border-radius: 30px;
+            background: #00cfff;
+            color: black;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.3s ease;
+        }
+
+        .hero-text a:hover {
+            transform: scale(1.08);
+            box-shadow: 0 0 25px #00cfff;
+        }
+
+        /* ROTATING EARTH */
+        .earth {
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            background: radial-gradient(circle at 30% 30%, #4facfe, #001d3d);
+            box-shadow: 0 0 40px rgba(0,207,255,0.6);
+            animation: rotateEarth 12s linear infinite;
+        }
+
+        @keyframes rotateEarth {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        /* CARDS */
+        .section {
+            padding: 80px 60px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: rgba(255,255,255,0.08);
+            padding: 25px;
+            border-radius: 18px;
+            transition: 0.4s ease;
+            animation: fadeUp 1s ease forwards;
+        }
+
+        .card:hover {
+            transform: scale(1.07);
+            box-shadow: 0 0 25px rgba(0,207,255,0.5);
+        }
+
+        .card h3 {
+            color: #00cfff;
+            margin-bottom: 10px;
+        }
+
+        .card a {
+            display: inline-block;
+            margin-top: 12px;
+            font-size: 14px;
+            color: #00cfff;
+            text-decoration: none;
+        }
+
+        /* ANIMATIONS */
+        @keyframes fadeSlide {
+            from {
+                opacity: 0;
+                transform: translateX(-40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            opacity: 0.6;
+            font-size: 13px;
+        }
+
+        @media (max-width: 900px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                gap: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">EarthFromSpace</div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="explore.html">Explore</a>
+        <a href="gallery.html" class="active">Gallery</a>
+        <a href="climate.html">Climate</a>
+        <a href="satellite.html">Satellites</a>
+        <a href="atmosphere.html" >Atmosphere</a>
+    </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-text">
+        <h1>Explore Earth 🌍</h1>
+        <p>
+            Interactively explore our planet, its atmosphere, climate,
+            satellites, and changes — powered by AI.
+        </p>
+        <a href="ai.html">Explore with AI 🤖</a>
+    </div>
+
+    <div class="earth"></div>
+</section>
+
+<!-- CONTENT -->
+<section class="section">
+    <div class="cards">
+
+        <div class="card">
+            <h3>🌍 Earth Overview</h3>
+            <p>Learn about Earth’s structure, age, and uniqueness.</p>
+            <a href="ai.html">Ask AI →</a>
+        </div>
+
+        <div class="card">
+            <h3>🌫 Atmosphere</h3>
+            <p>Understand layers of atmosphere and their importance.</p>
+            <a href="ai.html">Explain with AI →</a>
+        </div>
+
+        <div class="card">
+            <h3>🛰 Satellites</h3>
+            <p>Discover how satellites help study Earth.</p>
+            <a href="ai.html">Ask Earth AI →</a>
+        </div>
+
+        <div class="card">
+            <h3>🌡 Climate Change</h3>
+            <p>See how human activity is changing our planet.</p>
+            <a href="ai.html">Analyze with AI →</a>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    © 2026 Earth From Space
+</footer>
+
+</body>
+</html>
