@@ -1,0 +1,120 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to top, #000000, #020024);
+    color: white;
+}
+
+/* NAVBAR */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(6px);
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 600;
+    color: #00cfff;
+}
+
+nav a {
+    margin-left: 30px;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+
+nav a.active,
+nav a:hover {
+    color: #00cfff;
+}
+
+/* PAGE HEADER */
+.page-header {
+    padding: 140px 20px 60px;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.page-header p {
+    opacity: 0.8;
+}
+
+/* ATMOSPHERE CONTAINER */
+.atmosphere-container {
+    width: 80%;
+    margin: auto;
+    padding-bottom: 80px;
+}
+
+/* LAYERS */
+.layer {
+    padding: 50px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.05);
+    transition: all 0.4s ease;
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeUp 1s forwards;
+}
+
+.layer:nth-child(1) { animation-delay: 0.2s; }
+.layer:nth-child(2) { animation-delay: 0.4s; }
+.layer:nth-child(3) { animation-delay: 0.6s; }
+.layer:nth-child(4) { animation-delay: 0.8s; }
+.layer:nth-child(5) { animation-delay: 1s; }
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* HOVER HIGHLIGHT */
+.layer:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 25px #00cfff;
+}
+
+/* LAYER COLORS */
+.troposphere { background: linear-gradient(90deg, #1f4037, #99f2c8); }
+.stratosphere { background: linear-gradient(90deg, #4b6cb7, #182848); }
+.mesosphere { background: linear-gradient(90deg, #141e30, #243b55); }
+.thermosphere { background: linear-gradient(90deg, #ff512f, #dd2476); }
+.exosphere { background: linear-gradient(90deg, #3a1c71, #d76d77); }
+
+.layer h2 {
+    margin-bottom: 15px;
+}
+
+.layer p {
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    opacity: 0.6;
+}
