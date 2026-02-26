@@ -1,0 +1,163 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle at top, #020024, #000);
+    color: white;
+}
+
+/* NAVBAR */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(6px);
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 600;
+    color: #00cfff;
+}
+
+nav a {
+    margin-left: 30px;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+
+nav a.active,
+nav a:hover {
+    color: #00cfff;
+}
+
+/* PAGE HEADER */
+.page-header {
+    padding: 140px 20px 60px;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: 40px;
+}
+
+.page-header p {
+    opacity: 0.8;
+}
+
+/* SECTIONS */
+.section {
+    padding: 60px 80px;
+}
+
+.section h2 {
+    color: #00cfff;
+    margin-bottom: 15px;
+}
+
+.section p {
+    max-width: 900px;
+    line-height: 1.7;
+    opacity: 0.9;
+}
+
+/* CARDS */
+.cards {
+    padding: 40px 80px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: rgba(255,255,255,0.08);
+    padding: 25px;
+    border-radius: 18px;
+    transition: 0.4s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px rgba(0,207,255,0.6);
+}
+
+.card h3 {
+    color: #00cfff;
+    margin-bottom: 10px;
+}
+
+.card img {
+    width: 100%;
+    margin-top: 15px;
+    border-radius: 12px;
+}
+
+/* BEFORE AFTER */
+.before-after {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.before-after img {
+    width: 100%;
+    border-radius: 14px;
+}
+
+.before-after h4 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #00cfff;
+}
+
+/* STATS */
+.stats {
+    padding: 60px 40px;
+    background: rgba(255,255,255,0.05);
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.stat h2 {
+    font-size: 36px;
+    color: #ff4c4c;
+}
+
+.stat p {
+    opacity: 0.8;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 13px;
+    opacity: 0.6;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .section,
+    .cards {
+        padding: 40px 20px;
+    }
+
+    .stats {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
