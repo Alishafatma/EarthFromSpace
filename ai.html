@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ask Earth AI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="ai.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header>
+    <div class="logo">EarthFromSpace</div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="ai.html" class="active">Ask Earth AI</a>
+    </nav>
+</header>
+
+<!-- AI SECTION -->
+<section class="ai-container">
+    <h1>Ask Earth AI 🌍</h1>
+    <p class="subtitle">
+        Ask questions about climate change, satellites, atmosphere layers,
+        and Earth facts powered by Gemini AI.
+    </p>
+
+    <!-- CHAT BOX -->
+    <div class="chat-box">
+        <textarea id="question" placeholder="Example: Why are ice caps melting?"></textarea>
+        <button onclick="askEarthAI()">Ask</button>
+    </div>
+
+    <!-- ANSWER -->
+    <div id="answer" class="answer-box">
+        AI response will appear here...
+    </div>
+</section>
+
+<script src="ai.js"></script>
+</body>
+</html>
