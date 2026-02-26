@@ -1,0 +1,211 @@
+/* =========================
+   RESET
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   BODY
+========================= */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle at top, #020024, #000000);
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(6px);
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 600;
+    color: #00cfff;
+    letter-spacing: 1px;
+}
+
+nav a {
+    margin-left: 30px;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 15px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #00cfff;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 60px;
+    position: relative;
+}
+
+.hero-content {
+    max-width: 600px;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-size: 52px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-content h1 span {
+    color: #00cfff;
+}
+
+.hero-content p {
+    font-size: 16px;
+    opacity: 0.85;
+    margin-bottom: 30px;
+}
+.ai-preview {
+    padding: 80px 20px;
+    text-align: center;
+    background: rgba(255,255,255,0.04);
+}
+
+.ai-preview h2 {
+    color: #00cfff;
+    margin-bottom: 15px;
+}
+
+.ai-preview p {
+    max-width: 700px;
+    margin: auto;
+    opacity: 0.85;
+    margin-bottom: 25px;
+}
+
+.ai-button {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 30px;
+    background: #00cfff;
+    color: #000;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.buttons a {
+    display: inline-block;
+    padding: 12px 28px;
+    margin-right: 15px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: #00cfff;
+    color: #000;
+}
+
+.btn-primary:hover {
+    background: #00a6cc;
+}
+
+.btn-secondary {
+    border: 1px solid #00cfff;
+    color: #00cfff;
+}
+
+.btn-secondary:hover {
+    background: #00cfff;
+    color: #000;
+}
+
+/* =========================
+   EARTH IMAGE
+========================= */
+.earth {
+    position: absolute;
+    right: -150px;
+    width: 600px;
+    opacity: 0.9;
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 13px;
+    opacity: 0.6;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+@media (max-width: 900px) {
+    .earth {
+        width: 400px;
+        right: -200px;
+    }
+
+    .hero-content h1 {
+        font-size: 38px;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 20px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .earth {
+        display: none;
+    }
+
+    .hero {
+        padding: 0 20px;
+        text-align: center;
+    }
+}
