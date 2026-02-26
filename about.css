@@ -1,0 +1,157 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle at top, #020024, #000);
+    color: #ffffff;
+}
+
+/* NAVBAR */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(6px);
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 600;
+    color: #00cfff;
+}
+
+nav a {
+    margin-left: 30px;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 15px;
+}
+
+nav a.active,
+nav a:hover {
+    color: #00cfff;
+}
+
+/* PAGE HEADER */
+.page-header {
+    padding: 140px 20px 60px;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.page-header p {
+    opacity: 0.8;
+}
+
+/* SECTIONS */
+.section {
+    padding: 60px 80px;
+}
+
+.section h2 {
+    margin-bottom: 25px;
+    color: #00cfff;
+}
+
+.text {
+    max-width: 800px;
+    opacity: 0.85;
+    line-height: 1.6;
+}
+
+/* OVERVIEW CARDS */
+.overview-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.card span {
+    display: block;
+    margin-top: 10px;
+    color: #00cfff;
+    font-weight: 600;
+}
+
+/* IMAGE */
+.image {
+    width: 100%;
+    max-width: 700px;
+    margin-top: 30px;
+    border-radius: 12px;
+}
+
+/* FUN FACTS */
+.facts {
+    list-style: none;
+}
+
+.facts li {
+    margin-bottom: 12px;
+    padding-left: 15px;
+    position: relative;
+}
+
+.facts li::before {
+    content: "★";
+    position: absolute;
+    left: 0;
+    color: #00cfff;
+}
+
+/* COMPARISON */
+.compare {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.compare-card {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.compare-card img {
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 13px;
+    opacity: 0.6;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .section {
+        padding: 40px 20px;
+    }
+}
