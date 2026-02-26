@@ -43,9 +43,6 @@ The chatbot is powered using **Google Gemini API** integrated with a Node.js bac
 
 ---
 
-
----
-
 ## 🌍 Future Improvements
 
 - Real-time climate data integration
