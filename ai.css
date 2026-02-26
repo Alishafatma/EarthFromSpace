@@ -1,0 +1,99 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle at top, #020024, #000);
+    color: white;
+}
+
+/* NAVBAR */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(6px);
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 600;
+    color: #00cfff;
+}
+
+nav a {
+    margin-left: 30px;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+
+nav a.active,
+nav a:hover {
+    color: #00cfff;
+}
+
+/* AI CONTAINER */
+.ai-container {
+    padding: 160px 20px 80px;
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+
+.ai-container h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    opacity: 0.8;
+    margin-bottom: 40px;
+}
+
+/* CHAT BOX */
+.chat-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.chat-box textarea {
+    flex: 1;
+    height: 80px;
+    padding: 15px;
+    border-radius: 12px;
+    border: none;
+    resize: none;
+    font-family: inherit;
+}
+
+.chat-box button {
+    padding: 0 25px;
+    border-radius: 12px;
+    border: none;
+    background: #00cfff;
+    color: #000;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* ANSWER BOX */
+.answer-box {
+    background: rgba(255,255,255,0.08);
+    padding: 25px;
+    border-radius: 15px;
+    text-align: left;
+    min-height: 120px;
+    line-height: 1.6;
+}
